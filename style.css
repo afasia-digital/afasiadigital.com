@@ -1,10 +1,11 @@
-body {
+vbody {
     font-family: sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background-color: #f0f0f0;
+    margin: 0; /* Elimina márgenes por defecto */
 }
 
 .container {
@@ -13,6 +14,9 @@ body {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Ancho relativo para pantallas grandes */
+    max-width: 800px; /* Ancho máximo para evitar que se vuelva demasiado grande */
+    margin: 0 auto; /* Centrar horizontalmente */
 }
 
 h1 {
@@ -25,7 +29,14 @@ p {
 }
 
 img {
-    max-width: 200px; /* Ajusta el tamaño de tu logo */
+    max-width: 200px;
+}
+
+.social-text {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #555;
 }
 
 .social-buttons {
@@ -46,4 +57,16 @@ img {
 
 .social-buttons img:hover {
     transform: scale(1.2);
+}
+
+/* Media query para pantallas pequeñas (móviles) */
+@media (max-width: 767px) {
+    .container {
+        width: 90%;
+    }
+
+    .social-buttons img {
+        width: 40px;
+        height: 40px;
+    }
 }
